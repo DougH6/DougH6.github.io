@@ -21,9 +21,6 @@ a{
 }
 .container{
     background-color: var(--grey);
-    margin: 2rem auto;
-    max-width: 90rem;
-    width: 90%;
 }
 .header{
     display: flex;
@@ -31,29 +28,59 @@ a{
     justify-content: space-between;
 }
 .header_nav_list{
-    display: flex;
+    
     background-color: darkgray;
-    padding-top: 16px;
+    font-size: 150%;
     
 }
 h1{
+    font-size: 300%;
     margin-left: 15px;
 }
 .header_nav_list_item{
     list-style-type:none;
     margin: 5px;
 }
+.about_me_section{
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1rem auto;
+    row-gap: 50px;
+    padding: 1rem;
+}
+.about_me_header{
+    grid-column: 1;
+    grid-row: 1;
+}
+.about_me_photo{
+    grid-column: 1;
+    grid-row: 2;
+    padding-left: 2%;
+}
 .profile_image{
     height: 20rem;
     max-width: 75%;
 }
+.about_me_text{
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    padding-right: 30%;
+    padding-top: 50px;
+}
+.section_bio{
+    background-color: coral;
+}
+
 .project_section{
+    background-color: brown;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 1rem;
 }
 .project_header{
-    margin-top: 20%;
+    
 }
 .project_image{
     height: 20rem;
@@ -63,18 +90,31 @@ h1{
     text-align: center;
     background-color: darkgrey;
 }
-.about_me_section{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1rem 1rem 1rem;
-    row-gap: 50px;
-}
-.about_me_header{
-    grid-column: 1;
-    grid-row: 1;
-
-}
-.about_me_photo{
-    grid-column: 1;
-    grid-row: 2;
-}
+@media only screen and (max-width: 767px){
+    .header{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .header_nav_list{
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about_me{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .footer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .footer_copyright{
+        margin: 0;
+    }
+    
+    }
